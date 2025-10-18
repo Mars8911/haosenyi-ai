@@ -1,0 +1,15 @@
+# A 專案：用 5678
+N8N_PORT=5678
+N8N_PROTOCOL=http
+N8N_HOST=localhost
+
+# 登入保護（本機也建議先開）
+N8N_BASIC_AUTH_ACTIVE=true
+N8N_BASIC_AUTH_USER=bryan
+N8N_BASIC_AUTH_PASSWORD=a0903591111
+
+# 加密金鑰（隨機長字串）
+ENCRYPTION_KEY=a_project_random_long_secret_key
+
+# 把使用者資料夾綁在專案內（可選；與 --settings 同時存在沒衝突）
+N8N_USER_FOLDER=./.n8n_a

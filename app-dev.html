@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--<< Header Area >>-->
+<head>
+    <!-- 基本設定 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="好森逸行銷科技">
+    <meta name="description" content="好森逸行銷科技有限公司，專注於客製化網站設計、APP 開發、AI 商業應用與軟體開發。我們結合前端、後端與 AI 技術，為企業打造專屬的數位解決方案，協助提升效率與競爭力。">
+    <title>好森逸行銷科技 - APP開發</title>
+    <link rel="canonical" href="https://www.haosenyi.com/">
+    <link rel="shortcut icon" href="assets/img/favicon.svg">
+  
+    <!-- Open Graph (Facebook / LINE / LinkedIn) -->
+    <meta property="og:title" content="好森逸行銷科技 - 客製化網站、APP開發、AI商業應用">
+    <meta property="og:description" content="專業團隊提供網站設計、APP 開發、AI 整合與軟體開發服務，協助企業打造高效數位解決方案。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.haosenyi.com/">
+    <meta property="og:site_name" content="好森逸行銷科技">
+    <meta property="og:image" content="https://www.haosenyi.com/assets/img/new/og-image.jpg?v=5">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="好森逸行銷科技｜網站設計、APP 開發、AI 商業應用">
+  
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="好森逸行銷科技 - 客製化網站、APP開發、AI商業應用">
+    <meta name="twitter:description" content="網站設計、APP 開發、AI 整合，專業軟體開發公司。">
+    <meta name="twitter:image" content="https://www.haosenyi.com/assets/img/og-image.jpg?v=2">
+    <meta name="twitter:image:alt" content="好森逸行銷科技｜網站設計、APP 開發、AI 商業應用">
+  
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modules/landing/css/custom-services.css">
+</head>
+
+<body>
+
+    <!-- Back To Top Start -->
+    <div class="scroll-up">
+        <svg class="scroll-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+        </svg>
+    </div>
+
+    <!-- 讀取切換 Start -->
+    <div id="preloader" class="preloader">
+        <div class="animation-preloader">
+            <div class="spinner">
+            </div>
+            <div class="txt-loading">
+                <span data-text-preloader="H" class="letters-loading">
+                    H
+                </span>
+                <span data-text-preloader="A" class="letters-loading">
+                    A
+                </span>
+                <span data-text-preloader="O" class="letters-loading">
+                    O
+                </span>
+                <span data-text-preloader="S" class="letters-loading">
+                    S
+                </span>
+                <span data-text-preloader="E" class="letters-loading">
+                    E
+                </span>
+                <span data-text-preloader="N" class="letters-loading">
+                    N
+                </span>
+                <span data-text-preloader="Y" class="letters-loading">
+                    Y
+                </span>
+                <span data-text-preloader="I" class="letters-loading">
+                    I
+                </span>
+            </div>
+            <p class="text-center">Loading..</p>
+        </div>
+        <div class="loader">
+            <div class="row">
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-left">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section section-right">
+                    <div class="bg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+
+    <!-- 手機縮排資訊 Area Start -->
+    <div class="fix-area">
+        <div class="offcanvas__info">
+            <div class="offcanvas__wrapper">
+                <div class="offcanvas__content">
+                    <div class="offcanvas__top mb-5 d-flex justify-content-between align-items-center">
+                        <div class="offcanvas__logo">
+                            <a href="index.html">
+                                <img src="assets/img/new/logo-haosenyi.png" alt="logo-img" class="img-fluid w-sm-auto">
+                            </a>
+                        </div>
+                        <div class="offcanvas__close">
+                            <button>
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text d-none d-xl-block">
+                     好森逸行銷科技
+                    </p>
+                    <div class="mobile-menu fix mb-3"></div>
+                    <div class="offcanvas__contact">
+                        <h4>您可透過這樣 聯繫我們</h4>
+                        <ul>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon">
+                                    <i class="fal fa-map-marker-alt"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a target="_blank" href="#">221新北市汐止區新台五路一段97號27樓之7</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="fal fa-envelope"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a href="mailto:info@azent.com"><span
+                                            class="mailto:info@example.com">haosenyi@gmail.com</span></a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="fal fa-clock"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a target="_blank" href="#">週一至週五, 10:00 - 18:00</a>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="offcanvas__contact-icon mr-15">
+                                    <i class="far fa-phone"></i>
+                                </div>
+                                <div class="offcanvas__contact-text">
+                                    <a href="tel:+11002345909">(02)7753-8598</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="header-button mt-4">
+                            <a href="" class="theme-btn">
+                               線上直接洽詢
+                            </a>
+                        </div>
+                        <div class="social-icon d-flex align-items-center">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas__overlay"></div>
+    <div class="page-wrapper">
+        <!-- top 公司資訊 Start -->
+        <div class="topbar">
+            <div class="container">
+                <div class="topbar-inner d-flex align-items-center justify-content-between">
+                    <ul>
+                        <li>
+                            <i class="fal fa-phone-alt"></i>
+                            <a href="">(02) 7753-8598 </a>
+                        </li>
+                        <li>
+                            <i class="fal fa-map-marker-alt"></i>
+                            <a href="">新北市汐止區新台五路1段97號27樓</a>
+                        </li>
+                        <li>
+                            <i class="far fa-clock"></i>
+                            <a href="">週一至週五 10:00 - 18:00</a>
+                        </li>
+                    </ul><!-- /.topbar__info -->
+                    <div class="social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+
+                </div><!-- /.topbar__inner -->
+            </div><!-- /.container -->
+        </div>
+
+        <!-- Header Section Start -->
+        <header>
+            <div id="header-sticky" class="header-1">
+                <div class="container">
+                    <div class="mega-menu-wrapper">
+                        <div class="header-main ">
+                            <div class="header-left">
+                                <div class="logo">
+                                    <a href="index.html" class="header-logo">
+                                        <img src="assets/img/new/logo-haosenyi.png" alt="logo-img"
+                                            class="img-fluid  w-sm-auto">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="header-right">
+                                <div class="mean__menu-wrapper">
+                                    <div class="main-menu">
+                                        <nav id="mobile-menu">
+                                            <ul>
+                                                <li class="has-dropdown active menu-thumb">
+                                                    <a href="index.html">
+                                                        首頁
+                                                    </a>
+                                                </li>
+                                                <!-- MODEL -->
+                                                <li class="has-dropdown active d-xl-none">
+                                                    <a href="#" class="border-none">
+                                                        首頁
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </a>
+                                                </li>
+                                                <!-- MODEL END-->
+                                                <li class="has-dropdown active menu-thumb">
+                                                    <a href="services.html">
+                                                        服務核心
+                                                    </a>
+                                                </li>
+                                                <!-- MODEL -->
+                                                <li class="has-dropdown active d-xl-none">
+                                                    <a href="services.html" class="border-none">
+                                                        服務核心
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </a>
+                                                </li>
+                                                <!-- MODEL END-->
+                                                <li class="has-dropdown active menu-thumb">
+                                                    <a href="web-dev.html">
+                                                        客製網站
+                                                    </a>
+                                                </li>
+                                                <!-- MODEL -->
+                                                <li class="has-dropdown active d-xl-none">
+                                                    <a href="web-dev.html" class="border-none">
+                                                        客製網站
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </a>
+                                                </li>
+                                                <!-- MODEL END-->
+                                                <li class="has-dropdown active menu-thumb">
+                                                    <a href="app-dev.html">
+                                                        APP開發
+                                                    </a>
+                                                </li>
+                                                <!-- MODEL -->
+                                                <li class="has-dropdown active d-xl-none">
+                                                    <a href="app-dev.html" class="border-none">
+                                                        APP開發
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </a>
+                                                </li>
+                                                <!-- MODEL END-->
+                                                <li class="has-dropdown active menu-thumb">
+                                                    <a href="ai-dev.html">
+                                                        AI商業應用
+                                                    </a>
+                                                </li>
+                                                <!-- MODEL -->
+                                                <li class="has-dropdown active d-xl-none">
+                                                    <a href="ai-dev.html" class="border-none">
+                                                        AI商業應用
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </a>
+                                                </li>
+                                                <!-- MODEL END-->
+                                                <li class="has-dropdown active menu-thumb">
+                                                    <a href="tech-article.html">
+                                                        科技文章
+                                                    </a>
+                                                </li>
+                                                <!-- MODEL -->
+                                                <li class="has-dropdown active d-xl-none">
+                                                    <a href="tech-article.html" class="border-none">
+                                                        科技文章
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </a>
+                                                </li>
+                                                <!-- MODEL END-->
+                                                <li class="has-dropdown active menu-thumb">
+                                                    <a href="contact.html">
+                                                        聯繫我們
+                                                    </a>
+                                                </li>
+                                                <!-- MODEL -->
+                                                <li class="has-dropdown active d-xl-none">
+                                                    <a href="contact.html" class="border-none">
+                                                        聯繫我們
+                                                        <i class="fas fa-angle-down"></i>
+                                                    </a>
+                                                </li>
+                                                <!-- MODEL END-->
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="header-button  d-none d-sm-block">
+                                    <a href="" class="theme-btn black-btn">
+                                        線上諮詢
+                                    </a>
+                                </div>
+                                <div class="header__hamburger d-xl-none my-auto">
+                                    <div class="sidebar__toggle">
+                                        <i class="fas fa-bars"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!--<< Banner Section Start >>-->
+        <div class="breadcrumb-wrapper bg-cover" style="background-image: url('assets/img/new/appDev-banner.jpg');">
+            <div class="container">
+                <div class="page-heading">
+                    <div class="breadcrumb-sub-title">
+                        <h1 class="wow fadeInUp" data-wow-delay=".3s">App Development</h1>
+                        <ul class="breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                            <li>
+                                <a href="index.html">
+                                    首頁
+                                </a>
+                            </li>
+                            <li>
+                                <i class="far fa-angle-double-right"></i>
+                            </li>
+                            <li>
+                                APP開發
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <!-- App開發 -->
+        <section class="about-wrapper about-3 section-padding pb-0">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-xl-6 col-lg-12 col-md-12 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="about-images me-xxl-3">
+                            <div class="image-1">
+                                <img src="assets/img/new/shape-22.png" alt="img">
+
+                                <div class="experience">
+                                    <h2> <span class="count">24</span>H</h2>
+                                    <p>APP × AI<br>創造商業營收不間斷</p>
+                                </div>
+                            </div>
+                            <div class="image-2">
+                                <img src="assets/img/new/service-app-smail.png" alt="img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-8 col-md-12 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="about-content ms-xxl-3">
+                            <div class="section-title text-start">
+                                <div class="sub-title"><span>AI-POWERED SERVICES</span></div>
+                                <h2 class="split-text right">讓 APP 成為營收引擎 <br>不只是 APP，還是您的 AI 商業夥伴
+                                </h2>
+                            </div>
+                            <p>我們將 AI 技術融入 APP，讓它不僅僅是工具，而是能主動創造價值的數位資產。從智慧客服、個人化推薦到數據分析，AI 幫助您的 APP 成為真正的營收推手。</p>
+                            <p class="text">
+                                以 AI 技術結合 APP，我們幫助企業打造專屬數位解決方案。透過智能互動、精準行銷與自動化管理，協助品牌拓展市場，提高轉換率，創造持續成長的商業價值。
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i>智慧購物車 + AI 推薦
+                                    </li>
+                                    <li><i class="fas fa-check-circle"></i>AI 智能銷售服務
+                                    </li>
+                                    <li><i class="fas fa-check-circle"></i>全天候智能客服系統
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i>AI 精準行銷推播
+                                    <li><i class="fas fa-check-circle"></i>社群互動數據洞察
+                                    <li><i class="fas fa-check-circle"></i>AI 自動化營運管理
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="about-infu d-flex align-items-center">
+                                <a href="https://lin.ee/hiexw6MF" class="theme-btn black-btn">
+                                   線上了解更多服務
+                                </a>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <!-- APP Service 服務 Section Start -->
+        <section class="service-wrapper service-3 section-padding mt-5 section-bg">
+            <div class="container">
+                <div class="section-title-area">
+                    <div class="section-title text-white">
+                        <div class="sub-title"><span>APP SERVICES</span>
+                        </div>
+                        <h2 class="">我們打造智慧 APP，結合 AI 與創新，專為您的商業成長而設計</h2>
+                    </div>
+                    <p class="">我們不僅是開發團隊，更是值得信賴的 AI 合作夥伴，從構想到上線全程支援，幫助企業打造專屬 APP，創造獨特價值與營收成長。</p>
+
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="service-image">
+                            <img src="assets/img/new/app-service01.png" alt="app-service01">
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="single-service-item">
+                            <div class="icon"><i class="flaticon-management"></i></div>
+                            <h4>iOS / Android 雙平台開發：原生或跨平台開發，支援多裝置</h4>
+                            <div class="count-box">
+                                <h2><span class="count">100</span>％</h2>
+                                <p>雙平台上架效率</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="service-image">
+                            <img src="assets/img/new/app-service02.png" alt=service02">
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="single-service-item">
+                            <div class="icon"><i class="flaticon-world"></i></div>
+                            <h4>UI/UX 設計：專業設計師打造流暢介面與最佳體驗。</h4>
+                            <div class="count-box">
+                                <h2><span class="count">100</span>%</h2>
+                                <p>UI UX客戶滿意度</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay="500ms">
+                        <div class="single-service-item">
+                            <div class="icon"><i class="flaticon-strategy"></i> </div>
+                            <h4>API 與後端串接：整合會員、電商、預約、金流等功能。</h4>
+                            <div class="count-box">
+                                <h2><span class="count">100</span>%</h2>
+                                <p>電商 金流 效率</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay="600ms">
+                        <div class="service-image">
+                            <img src="assets/img/new/app-service03.png" alt="app-service03">
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay="700ms">
+                        <div class="single-service-item">
+                            <div class="icon"><i class="flaticon-expert-system"></i> </div>
+                            <h4>APP 上架與維護：協助上架至 App Store / Google Play，並提供後續技術支援</h4>
+                            <div class="count-box">
+                                <h2><span class="count">1000</span>+</h2>
+                                <p>服務上架各品牌企業</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-12 wow fadeInUp" data-wow-delay="800ms">
+                        <div class="service-image">
+                            <img src="assets/img/new/app-service04.png" alt="app-service04">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 開發四步驟 Start -->
+        <section class="process-wrapper process-2 section-padding section-bg">
+            <div class="container">
+                <div class="section-title text-center">
+                    <div class="sub-title"><span>HOW IT WORKS</span></div>
+                    <h2 class="split-text right">透明流程，確保品質</h2>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="signle-process-item pe-xl-4">
+                            <img class="shape-1" src="assets/img/process/shape-6.png" alt="">
+                            <div class="icons">
+                                <div class="icon-1"><i class="flaticon-conversation"></i></div>
+                                <div class="icon-2">01</div>
+                            </div>
+                            <h4 class="mb-2">需求訪談</h4>
+                            <p>深入了解您的 APP 構想、目標市場與功能需求。我們會釐清專案範圍，確保每個細節都符合您的商業定位與期望成果。</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 mt-xl-5  wow fadeInUp" data-wow-delay="400ms">
+                        <div class="signle-process-item pe-xl-3 ps-xl-2 ">
+                            <img class="shape-2" src="assets/img/process/shape-7.png" alt="">
+                            <div class="icons">
+                                <div class="icon-1"><i class="flaticon-cms"></i></div>
+                                <div class="icon-2">02</div>
+                            </div>
+                            <h4 class="mb-2">規劃設計</h4>
+                            <p>依據需求提供完整的 APP 架構與設計稿，包含介面流程、UI/UX 體驗設計，確保 APP 不僅外觀專業，更符合操作邏輯與使用者習慣。</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6  wow fadeInUp" data-wow-delay="600ms">
+                        <div class="signle-process-item ps-xl-3 pe-xl-2">
+                            <img class="shape-1" src="assets/img/process/shape-6.png" alt="">
+                            <div class="icons">
+                                <div class="icon-1"><i class="flaticon-maintenance"></i></div>
+                                <div class="icon-2">03</div>
+                            </div>
+                            <h4 class="mb-2">系統開發</h4>
+                            <p>由前端與後端工程師協作，將設計落實為高效能 APP，支援 iOS/Android 雙平台與跨裝置 RWD，並可整合會員、電商、預約或 AI 技術。</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-6 col-md-6 mt-xl-5  wow fadeInUp" data-wow-delay="400ms">
+                        <div class="signle-process-item ps-xl-4">
+                            <div class="icons">
+                                <div class="icon-1"><i class="flaticon-positive-review"></i></div>
+                                <div class="icon-2">04</div>
+                            </div>
+                            <h4 class="mb-2">上線交付</h4>
+                            <p>完成測試與優化後，協助 APP 正式上架至 App Store / Google Play，並提供維護服務，確保應用程式穩定、安全，並持續創造價值。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+              <!-- 成功案例 Start -->
+              <section class="case-study-wrapper case-study-1 section-bg section-padding">
+                <div class="shape">
+                    <img class="shape-1" src="assets/img/shape/shape-6.png" alt="">
+                </div>
+                <div class="container">
+                    <div class="section-title-area">
+                        <div class="section-title ">
+                            <div class="sub-title"><span>Successful Case Studies</span>
+                            </div>
+                            <h2 class="split-text eft">成功案例分享</h2>
+                        </div>
+                        <p class="text-center text-md-start">
+                            從網站和APP設計到系統開發，我們協助不同產業解決挑戰並加速成長，
+                            <br> 透過專業技術，幫助企業提升效率、擴大市場、增加營收。
+                        </p>
+                    </div>
+                </div>
+                <div class="case-study-inner mt-5">
+                    <div class="swiper caseStudy">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="single-case-item  wow fadeInUp" data-wow-delay="200ms">
+                                    <div class="image">
+                                        <img src="assets/img/new/geil.png" alt="geil">
+                                    </div>
+                                    <div class="content d-flex align-items-center justify-content-between">
+                                        <div class="title">
+                                            <span class="text-info">企業品牌網站</span>
+                                            <h4><a href="https://geilmemory.com/" target="_blank">GEIL 友懋科技</a></h4>
+                                        </div>
+                                        <a href="https://geilmemory.com/" class="icon" target="_blank"><i
+                                                class="far fa-long-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="single-case-item  wow fadeInUp" data-wow-delay="400ms">
+                                    <div class="image">
+                                        <img src="assets/img/new/masi.png" alt="masi">
+                                    </div>
+                                    <div class="content d-flex align-items-center justify-content-between">
+                                        <div class="title">
+                                            <span class="text-info">企業品牌網站</span>
+                                            <h4><a href="https://www.mcsi.com.tw/" target="_blank">Masi 技成科技</a></h4>
+                                        </div>
+                                        <a href="https://www.mcsi.com.tw/" target="_blank" class="icon"><i
+                                                class="far fa-long-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="single-case-item  wow fadeInUp" data-wow-delay="600ms">
+                                    <div class="image">
+                                        <img src="assets/img/new/74ounce.png" alt="74ounce">
+                                    </div>
+                                    <div class="content d-flex align-items-center justify-content-between">
+                                        <div class="title">
+                                            <span class="text-info">電商購物車網站</span>
+                                            <h4><a href="https://www.74oz.com.tw/" target="_blank">74 OUNCE</a></h4>
+                                        </div>
+                                        <a href="https://www.74oz.com.tw/" target="_blank" class="icon"><i
+                                                class="far fa-long-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="single-case-item  wow fadeInUp" data-wow-delay="600ms">
+                                    <div class="image">
+                                        <img src="assets/img/new/ema.png" alt="醫美聯購">
+                                    </div>
+                                    <div class="content d-flex align-items-center justify-content-between">
+                                        <div class="title">
+                                            <span class="text-info">APP 平台</span>
+                                            <h4><a href="#">醫美聯購平台</a></h4>
+                                        </div>
+                                        <a href="#" class="icon"><i class="far fa-long-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-dot mt-5 pt-5 border-style center">
+                            <div class="dot"></div>
+                        </div>
+                    </div>
+                </div>
+    
+            </section>
+
+        <!-- 規劃網站連結 Section Start -->
+        <section class="cta-wrapper cta-2 style-3 section-padding pb-0 section-bg">
+            <div class="container">
+                <div class="cta-inner wow fadeInUp" data-wow-delay="200ms">
+                    <div class="icon"><i class="flaticon-customer-support"></i></div>
+                    <div class="title">
+                        <h3 class="split-text right">讓 AI 幫你 2 分鐘規劃 APP</h3>
+                        <p>輸入產業與目標，立即產生網站架構、頁面清單與文案雛形</p>
+                    </div>
+                    <a href="" class="theme-btn white-btn">免費快速體驗</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section Start -->
+        <footer class="footer-wrapper section-bg-2  mt-5 text-white">
+            <div class="container">
+                <div class="footer-widgets-1 section-padding ">
+                    <div class="row g-5">
+                        <div class="col-xl-4 col-lg-6 wow fadeInUp" data-wow-delay="200ms">
+                            <div class="single-footer-widget me-xxl-5 pe-xxl-4">
+                                <div class="widget-head">
+                                    <a href="index.html">
+                                        <img src="assets/img/new/logo-haosenyi-w.png" alt="logo-img">
+                                    </a>
+                                </div>
+                                <div class="footer-content">
+                                    <h4>好森逸行銷科技有限公司</h4>
+                                    <p class="h6 pt-2">
+                                        我們專注於網站設計、APP應用開發、客製化開發、 AI 智能整合與 SEO 優化，協助企業打造高效、智慧、具競爭力的數位品牌。
+                                    </p>
+                                    </p>
+
+                                    <div class="footer-input border-radius-none">
+                                        <a href="" class="theme-btn black-btn">
+                                            洽詢AI商務服務
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-6 wow fadeInUp" data-wow-delay="400ms">
+                            <div class="single-footer-widget ms-xxl-2">
+                                <div class="widget-head">
+                                    <h4>快速導覽</h4>
+                                </div>
+                                <ul class="list-area">
+                                    <li>
+                                        <a href="services.html">
+                                            <i class="fas fa-circle"></i>
+                                            服務核心
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="web-dev.html">
+                                            <i class="fas fa-circle"></i>
+                                            客製網站
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="app-dev.html">
+                                            <i class="fas fa-circle"></i>
+                                            APP開發
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="ai-dev.html">
+                                            <i class="fas fa-circle"></i>
+                                            Ai商業應用
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="contact.html">
+                                            <i class="fas fa-circle"></i>
+                                            聯繫我們
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 wow fadeInUp" data-wow-delay="600ms">
+                            <div class="single-footer-widget ms-xxl-4 ps-xxl-3">
+                                <div class="widget-head">
+                                    <h4>科技文章</h4>
+                                </div>
+                                <ul class="list-area">
+                                    <li>
+                                        <a href="tech-article01.html">
+                                            <i class="fas fa-circle"></i>
+                                            網站結合 AI 的優勢
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tech-article02.html"">
+                                            <i class=" fas fa-circle"></i>
+                                            APP 結合 AI 的商機
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tech-article03.html">
+                                            <i class="fas fa-circle"></i>
+                                            AI銷售客服，24小時智慧銷售
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tech-article04.html">
+                                            <i class="fas fa-circle"></i>
+                                            AI 預約功能，讓服務流程更智慧
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="tech-article05.html">
+                                            <i class="fas fa-circle"></i>
+                                            AI + SEO 打造高效行銷新策略
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 wow fadeInUp" data-wow-delay="800ms">
+                            <div class="single-footer-widget ms-xxl-3">
+                                <div class="widget-head">
+                                    <h4>聯繫我們</h4>
+                                </div>
+                                <div class="footer-content">
+                                    <div class="contact-info-area">
+                                        <div class="contact">
+                                            <a href="#"><i class="flaticon-email"></i></a>
+                                            <div class="contact-infu">
+                                                <span>
+                                                    Mail Us:
+                                                </span>
+                                                <h5>haosenyi@gmail.com</h5>
+                                            </div>
+                                        </div>
+                                        <div class="contact">
+                                            <a href=""><i class="fal fa-map-marker-alt"></i></a>
+                                            <div class="contact-infu">
+                                                <span>
+                                                    Address:
+                                                </span>
+                                                <h5 class="text-lowercase"> 221新北市汐止區新台五路一段97號27樓之7
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class="contact">
+                                            <a href="#"><i class="fal fa-phone-alt"></i></a>
+                                            <div class="contact-infu">
+                                                <span>
+                                                    Phone:
+                                                </span>
+                                                <h5>(02)7753-8598</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom section-bg-2">
+                <div class="container">
+                    <div class="footer-bottom-wrapper">
+                        <p class="text-center">
+                            &copy;Copyright 2025 好森逸行銷科技 All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+
+    <!--<< All JS Plugins >>-->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!--<< Jquery ui Js >>-->
+    <script src="assets/js/jquery-ui.js"></script>
+    <!--<< Imagesloaded Js >>-->
+    <script src="assets/js/imagesloaded.min.js"></script>
+    <!--<< Viewport Js >>-->
+    <script src="assets/js/viewport.jquery.js"></script>
+    <!--<< Bootstrap Js >>-->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!--<< Gsap Js >>-->
+    <script src="assets/js/gsap/gsap.js"></script>
+    <!--<< Gsap Scroll To Pluging Js >>-->
+    <script src="assets/js/gsap/gsap-scroll-to-plugin.js"></script>
+    <!--<< Gsap Scroll Smoother Js >>-->
+    <script src="assets/js/gsap/gsap-scroll-smoother.js"></script>
+    <!--<< Gsap Scroll Trigger Js >>-->
+    <script src="assets/js/gsap/gsap-scroll-trigger.js"></script>
+    <!--<< Gsap Split Text Js >>-->
+    <script src="assets/js/gsap/gsap-split-text.js"></script>
+    <!--<< Gsap zotect Js >>-->
+    <script src="assets/js/gsap/gsap-zotect.js"></script>
+    <!--<< Nice Select Js >>-->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!--<< Isotope Js >>-->
+    <script src="assets/js/isotope.js"></script>
+    <!--<< Waypoints Js >>-->
+    <script src="assets/js/jquery.waypoints.js"></script>
+    <!--<< Counterup Js >>-->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!--<< appear Js >>-->
+    <script src="assets/js/jquery.appear.min.js"></script>
+    <!--<< Ajax Js >>-->
+    <script src="assets/js/ajax-mail.js"></script>
+    <!--<< Swiper Slider Js >>-->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!--<< MeanMenu Js >>-->
+    <script src="assets/js/jquery.meanmenu.min.js"></script>
+    <!--<< Magnific Popup Js >>-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!--<< Wow Animation Js >>-->
+    <script src="assets/js/wow.min.js"></script>
+    <!--<< Main.js >>-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

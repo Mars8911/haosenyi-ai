@@ -1,0 +1,327 @@
+.funfact-1 {
+    position: relative;
+    margin-top: -110px;
+
+    .funfact-inner {
+        background: linear-gradient(84deg, #3FB5FD 0%, #0B6EDA 100%);
+        padding: 50px 70px;
+        border-radius: 20px;
+        @include flex;
+        justify-content: space-between;
+
+        @include breakpoint (max-xxl) {
+            flex-direction: column;
+            gap: 20px;
+
+        }
+
+        @include breakpoint (max-lg) {
+            padding: 50px 30px;
+        }
+
+        .title {
+            width: 30%;
+            color: $white;
+            font-size: 28px;
+            font-weight: 800;
+            line-height: 38px;
+            letter-spacing: -0.28px;
+
+            @include breakpoint (max-xxl) {
+                width: 100%;
+                text-align: center;
+                font-size: 35px;
+            }
+        }
+
+        .funfact-items {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            align-items: center;
+            gap: 50px;
+
+            @include breakpoint (max-lg) {
+                grid-template-columns: auto auto;
+                gap: 30px;
+            }
+
+            @include breakpoint (max-md) {
+                grid-template-columns: auto;
+            }
+
+            .single-funfact-item {
+                @include flex;
+                gap: 15px;
+
+                @include breakpoint (max-md) {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .icon {
+                    font-size: 70px;
+                    color: $white;
+
+                    @include breakpoint (max-xl) {
+                        font-size: 50px;
+                    }
+                }
+
+                .count-box {
+                    position: relative;
+                    width: 100%;
+
+                    h2 {
+                        width: 100%;
+                        color: $white;
+                        font-size: 60px;
+                        font-weight: 700;
+                        line-height: 69px;
+                        letter-spacing: -1.2px;
+
+                        @include breakpoint (max-xl) {
+                            font-size: 45px;
+                        }
+                    }
+
+                    p {
+                        color: $white-3;
+                    }
+                }
+            }
+        }
+
+
+
+    }
+
+}
+
+.funfact-2 {
+    position: relative;
+
+    .shape-1 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 19%;
+        z-index: -1;
+    }
+
+    .funfact-inner {
+        border-radius: 12px;
+        border: 1px solid rgba(4, 11, 41, 0.08);
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        justify-content: space-between;
+        padding: 35px;
+
+        @include breakpoint (max-xl) {
+            grid-template-columns: auto auto auto;
+            gap: 30px;
+        }
+
+        @include breakpoint (max-lg) {
+            grid-template-columns: auto auto;
+            justify-content: center
+        }
+
+
+        .signle-funfact-item {
+            @include flex;
+            gap: 15px;
+            position: relative;
+
+            @include breakpoint (max-md) {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            &::after {
+                @include after;
+                width: 1px;
+                height: 164px;
+                background-color: rgba(4, 11, 41, 0.08);
+                bottom: auto;
+                top: -35px;
+                right: -50px;
+                left: auto;
+
+                @include breakpoint (max-xxl) {
+                    display: none;
+                }
+            }
+
+            &:nth-child(4) {
+                &::after {
+                    content: none;
+                }
+            }
+
+            .icon {
+                width: 92px;
+                height: 84px;
+                background: #FFF;
+                box-shadow: 7px 11px 50px 52px rgba(2, 8, 66, 0.03);
+                @include icon;
+                border-radius: 6px;
+                font-size: 49px;
+
+                i {
+                    background: linear-gradient(84deg, #3FB5FD 0%, #0B6EDA 100%);
+                    @include clip;
+                }
+            }
+
+            .count-box {
+                h2 {
+                    color: $theme-color-2;
+                    font-size: 48px;
+                    font-weight: 600;
+                    letter-spacing: -0.96px;
+                }
+            }
+        }
+    }
+
+}
+
+.funfact-3 {
+    position: relative;
+
+    .bg-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: -1;
+    }
+
+    .shape-text {
+        white-space: nowrap;
+        min-width: 100%;
+        z-index: 1;
+        font-size: 150px;
+        line-height: 120px;
+        color: rgba(255, 255, 255, 0.80);
+        font-weight: 900;
+        letter-spacing: -3px;
+        white-space: nowrap;
+        text-transform: uppercase;
+        animation: scroll3 50s linear infinite;
+
+
+    }
+
+
+    .funfact-inner {
+        padding-top: 120px;
+
+
+        .funfact-content {
+            position: relative;
+
+            .funfact-items {
+                display: grid;
+                grid-template-columns: auto auto;
+                align-items: center;
+                margin-top: 40px;
+                row-gap: 70px;
+
+
+                .signle-funfact-item {
+                    @include flex;
+                    gap: 25px;
+                    @include breakpoint (max-sm) {
+                        flex-direction: column;
+                        text-align: center;
+                    }
+                    .icon {
+                        width: 92px;
+                        height: 84px;
+                        border: 1px solid rgba(255, 255, 255, 0.87);
+                        background: rgba(255, 255, 255, 0.33);
+                        font-size: 50px;
+                        color: $white;
+                        @include icon;
+                        border-radius: 6px;
+
+                    }
+
+                    h2 {
+                        color: $theme-color-4;
+                        font-size: 48px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .funfact-image {
+            float: right;
+            position: relative;
+
+            .shape-1 {
+                position: absolute;
+                top: 32px;
+                left: -140px;
+                z-index: -1;
+                animation: spinner 30s infinite linear;
+
+            }
+
+            @include breakpoint (max-lg) {
+                float: none;
+
+            }
+
+            .image-1 {
+                width: 435px;
+                height: 580px;
+
+                @include breakpoint (max-lg) {
+                    width: 100%;
+
+                }
+
+                img {
+                    @include imgw;
+                    object-fit: cover;
+                    border-radius: 12px;
+                }
+            }
+
+            .image-2 {
+                width: 320px;
+                height: 354px;
+                position: absolute;
+                bottom: -30px;
+                left: -200px;
+                z-index: 1;
+
+                @include breakpoint (max-xxl) {
+                    left: -100px;
+                }
+
+                &::after {
+                    @include after;
+                    background-color: $white;
+                    top: -12px;
+                    right: -12px;
+                    left: auto;
+                    bottom: auto;
+                    z-index: -1;
+                    border-radius: 12px;
+                }
+
+
+
+                img {
+                    @include imgw;
+                    object-fit: cover;
+                    border-radius: 12px;
+                }
+            }
+        }
+    }
+}

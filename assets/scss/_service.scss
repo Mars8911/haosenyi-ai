@@ -1,0 +1,813 @@
+.service-1 {
+    position: relative;
+
+    .shape-1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 28%;
+    }
+
+    .shape-2 {
+        position: absolute;
+        top: 140px;
+        right: -15%;
+        opacity: 8%;
+    }
+
+    .service-inner {
+        position: relative;
+        z-index: 11;
+
+        .countbox {
+            h3 {
+                font-size: 140px;
+                font-weight: 700;
+                line-height: 120px;
+                letter-spacing: -2.8px;
+                background: linear-gradient(84deg, #3FB5FD 0%, #0B6EDA 100%);
+                @include clip;
+
+
+            }
+
+            p {
+                color: $text-color;
+                font-size: 22px;
+                padding-top: 15px;
+            }
+
+            @include breakpoint(max-md) {
+                display: none;
+            }
+        }
+
+        .title {
+            h3 {
+                color: $black-2;
+                font-size: 30px;
+                font-weight: 700;
+                line-height: 45px;
+                letter-spacing: -0.6px;
+
+                @include breakpoint (max-md) {
+                    font-size: 18px;
+                    margin-top: 20px;
+                    line-height: 30px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .single-service-item {
+            position: relative;
+            margin-top: 40px;
+            z-index: 2;
+            overflow: hidden;
+
+            .shape-3 {
+                position: absolute;
+                top: 0px;
+                left: -0;
+                z-index: 1;
+                border-top-left-radius: 130px;
+                opacity: 0;
+                transition: all 0.4s ease-in-out;
+            }
+
+            .shape-4 {
+                position: absolute;
+                bottom: 80px;
+                right: -50px;
+                z-index: 1;
+                opacity: 0;
+                @include transition;
+            }
+
+            .image {
+                mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 424 518" xmlns="http://www.w3.org/2000/svg"><path d="M0 51.688C0 44.4673 3.89212 37.8073 10.1831 34.263L66.4293 2.57504C69.4258 0.8869 72.8069 0 76.2462 0H404C415.046 0 424 8.9543 424 20V498C424 509.046 415.046 518 404 518H20C8.9543 518 0 509.046 0 498V51.688Z"/></svg>');
+                -webkit-mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 424 518" xmlns="http://www.w3.org/2000/svg"><path d="M0 51.688C0 44.4673 3.89212 37.8073 10.1831 34.263L66.4293 2.57504C69.4258 0.8869 72.8069 0 76.2462 0H404C415.046 0 424 8.9543 424 20V498C424 509.046 415.046 518 404 518H20C8.9543 518 0 509.046 0 498V51.688Z"/></svg>');
+                @include mask;
+
+
+                img {
+                    @include imgw;
+                    object-fit: cover;
+                }
+            }
+
+            .content {
+                background-color: $white;
+                text-align: center;
+                padding: 25px 30px;
+                padding-top: 55px;
+                position: absolute;
+                bottom: 20px;
+                width: calc(100% - 40px);
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 20px;
+                z-index: 2;
+
+
+                .icon {
+                    width: 80px;
+                    height: 80px;
+                    position: absolute;
+                    top: -40px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    @include icon;
+                    font-size: 30px;
+                    color: $white;
+                    background: linear-gradient(84deg, $theme-color 0%, $theme-color-2 100%);
+                    overflow: hidden;
+
+                    i {
+                        position: relative;
+                        z-index: 2;
+                        display: inline-block;
+                        -webkit-backface-visibility: hidden;
+                        backface-visibility: hidden;
+                    }
+
+
+                }
+
+                h4 {
+                    color: $black-2;
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 29px;
+                    letter-spacing: -0.2px;
+                    padding-bottom: 5px;
+
+                    a {
+                        background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
+                        transition: all 500ms ease;
+
+                        &:hover {
+                            color: $theme-color;
+                            background-size: 100% 1px;
+                        }
+                    }
+
+
+
+
+                }
+            }
+
+            &:hover {
+                .icon {
+                    i {
+                        animation: iconTranslateX 0.4s forwards;
+                    }
+                }
+
+                .icon-list {
+                    opacity: 1;
+                    visibility: visible;
+                }
+
+                .shape-3 {
+                    top: -2px;
+                    opacity: 1;
+                    left: -30px;
+                }
+
+                .shape-4 {
+                    opacity: 1;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+}
+
+.service-2 {
+    background-color: rgba(255, 255, 255, 0.05);
+
+    .service-inner {
+        padding-bottom: 260px;
+
+        .service-items {
+            padding-top: 60px;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            justify-content: space-between;
+            column-gap: 123px;
+            row-gap: 90px;
+
+            @include breakpoint (max-xxl) {
+                column-gap: 90px;
+
+            }
+
+            @include breakpoint (max-xl) {
+                grid-template-columns: auto auto;
+
+            }
+
+            @include breakpoint (max-md) {
+                grid-template-columns: auto;
+
+            }
+
+            .signle-service-item {
+                position: relative;
+                cursor: pointer;
+
+                @include breakpoint (max-md) {
+                    text-align: center;
+
+                }
+
+                &::after {
+                    @include after;
+                    border-right: 1px solid rgba(255, 255, 255, 0.12);
+                    left: 60px;
+
+                    @include breakpoint (max-xxl) {
+                        left: 45px;
+
+                    }
+
+                }
+
+                &::before {
+                    @include before;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+                    bottom: -45px;
+                    top: auto;
+
+                }
+
+
+                @include breakpoint (max-xl) {
+
+                    &::after,
+                    &::before {
+                        display: none;
+                    }
+
+                }
+
+                &:nth-child(3),
+                &:nth-child(6) {
+                    &::after {
+                        border-right: none;
+                    }
+                }
+
+                &:nth-child(4),
+                &:nth-child(5),
+                &:nth-child(6) {
+                    &::before {
+                        border-bottom: none;
+                    }
+                }
+
+
+                .title {
+                    gap: 18px;
+
+                    @include breakpoint (max-md) {
+                        flex-direction: column;
+
+                    }
+
+                    .icon {
+                        font-size: 43px;
+                        color: $white;
+                    }
+
+                    h3 {
+                        color: $white;
+                        font-size: 20px;
+                    }
+                }
+
+                p {
+                    padding-left: 60px;
+                    line-height: 26px;
+                    padding-top: 10px;
+                    font-weight: 500;
+                    color: rgba(255, 255, 255, 0.75);
+                    padding-bottom: 15px;
+
+                    @include breakpoint (max-md) {
+                        padding-left: 0;
+
+                    }
+                }
+
+                a {
+                    padding-left: 60px;
+                    font-size: 17px;
+                    font-weight: 700;
+                    background: linear-gradient(84deg, #3FB5FD 0%, #0B6EDA 100%);
+                    @include clip;
+                    text-align: center;
+                    @include flex;
+                    gap: 8px;
+
+                    @include breakpoint (max-md) {
+                        padding-left: 0;
+                        justify-content: center;
+
+                    }
+                }
+
+
+                &:hover {
+                    .icon {
+                        animation: bounceIn 1s linear;
+                    }
+                }
+            }
+
+
+        }
+
+        .button {
+            gap: 20px;
+
+            @include breakpoint (max-md) {
+                flex-direction: column;
+            }
+
+
+            .theme-btn {
+                @include breakpoint (max-md) {
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+}
+
+.service-3 {
+    .service-image {
+        width: 100%;
+        height: 355px;
+        margin-top: 30px;
+
+        img {
+            @include imgw;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+    }
+
+    .single-service-item {
+        width: 100%;
+        height: 355px;
+        background-color: $theme-color-3;
+        padding: 30px 42px;
+        padding-right: 25px;
+        position: relative;
+        border-radius: 12px;
+        margin-top: 30px;
+
+        .icon {
+            font-size: 50px;
+            background: linear-gradient(84deg, #3FB5FD 0%, #0B6EDA 100%);
+            @include clip;
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            color: $white;
+            font-size: 20px;
+            line-height: 29px;
+            letter-spacing: -0.2px;
+        }
+
+        .count-box {
+            position: absolute;
+            bottom: 30px;
+
+            h2 {
+                color: rgba(255, 255, 255, 0.32);
+                font-size: 60px;
+
+                font-weight: 800;
+                line-height: 69px;
+                letter-spacing: -1.2px;
+            }
+
+
+
+            p {
+                color: $white;
+            }
+        }
+
+        &:hover {
+            h2 {
+                -webkit-text-stroke-width: 0;
+                -webkit-text-stroke-color: transparent;
+                background: linear-gradient(84deg, #3FB5FD 0%, #0B6EDA 100%);
+                @include clip;
+            }
+        }
+    }
+}
+
+.service-4 {
+    position: relative;
+    overflow: hidden;
+
+    .shape-1 {
+        position: absolute;
+        bottom: -50px;
+        left: 20px;
+        animation: spinner 30s infinite linear;
+
+    }
+
+    .shape-2 {
+        position: absolute;
+        top: 70px;
+        right: 30%;
+        rotate: 90deg;
+        opacity: 0.17;
+        animation: zoomBig 3s infinite linear;
+
+    }
+
+    .shape-3 {
+        position: absolute;
+        bottom: -50px;
+        right: -50px;
+        opacity: 0.12;
+        animation: zoomBig 3s infinite linear;
+
+    }
+
+    .array-button {
+        position: absolute;
+        top: 65%;
+        right: 8%;
+        left: 8%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        z-index: 99;
+
+        .array-prev {
+            position: absolute;
+            color: $black-2;
+            border: 1px solid $black-2;
+            left: 0;
+
+        }
+
+        .array-next {
+            position: absolute;
+            color: $black-2;
+            border: 1px solid $black-2;
+            right: 0;
+        }
+
+        @include breakpoint (max-xxxl) {
+            display: none;
+        }
+    }
+
+    .signle-service-item {
+        width: 100%;
+        height: 310px;
+        padding: 75px 40px 30px 40px;
+        position: relative;
+        margin-top: 60px;
+        border-radius: 12px;
+        text-align: center;
+        background-color: $white;
+        z-index: 1;
+
+        h4 {
+            a {
+                color: $black-2;
+            }
+        }
+
+        .icon {
+            position: absolute;
+            top: -35px;
+            left: 37%;
+            transform: translate(-50%);
+            width: 70px;
+            height: 70px;
+            transform: rotate(-45deg);
+            border-radius: 12px;
+            background: linear-gradient(84deg, #3FB5FD 0%, #0B6EDA 100%);
+            @include flex;
+            justify-content: center;
+            color: $white;
+            font-size: 33px;
+            overflow: hidden;
+
+            @include breakpoint (max-xl) {
+                left: 42%;
+
+            }
+
+
+            i {
+                transform: rotate(45deg);
+                position: relative;
+                z-index: 2;
+                display: inline-block;
+                -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+
+
+            }
+        }
+
+        .line {
+            width: 130px;
+            height: 4px;
+            margin: 0 auto;
+            background: linear-gradient(84deg, #3FB5FD 0%, #0B6EDA 100%);
+
+        }
+
+        .infu-btn {
+            background: linear-gradient(84deg, #3FB5FD 0%, #0B6EDA 100%);
+            @include clip;
+            font-size: 17px;
+            font-weight: 700;
+            @include flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            @include transition;
+        }
+
+        .service-bg {
+            position: relative;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0%;
+            z-index: -1;
+            opacity: 0;
+            visibility: hidden;
+            @include transition;
+            overflow: hidden;
+            border-radius: 12px;
+
+            &::after {
+                @include after;
+                background: rgba(0, 3, 37, 0.56);
+            }
+        }
+
+        &:hover {
+            color: $white;
+            .icon {
+                i {
+                    animation: iconTranslateX 0.4s forwards;
+                }
+            }
+
+            h4 {
+                color: $white;   
+            }
+            h5 {
+                color: $white;   
+        }
+
+            p {
+                color: $white;   
+            }
+
+            .infu-btn {
+                background: none;
+                color: $white;
+            }
+
+            .service-bg {
+                opacity: 1;
+                visibility: visible;
+                height: 100%;
+            }
+
+        }
+    }
+}
+
+.service-5 {
+    .service-slide-2 {
+        overflow: inherit;
+    }
+
+    .signle-service-item {
+        border-radius: 12px;
+        background-color: $white;
+        box-shadow: 7px 11px 50px 52px rgba(2, 8, 66, 0.03);
+        @include flex;
+        padding: 40px 10px 50px 45px;
+        gap: 40px;
+
+        @include breakpoint(max-md) {
+            padding: 20px;
+            gap: 20px;
+            flex-direction: column;
+        }
+
+        .icon {
+            animation: spinner 30s infinite linear;
+        }
+
+        h3 {
+            font-size: 26px;
+
+            @include breakpoint(max-md) {
+                font-size: 18px;
+            }
+
+            a {
+                color: $black-2;
+            }
+        }
+
+        ul {
+            li {
+                color: $text-color;
+                font-weight: 500;
+                @include flex;
+                gap: 5px;
+                padding-top: 5px;
+
+                i {
+                    color: $theme-color-2;
+                }
+            }
+        }
+    }
+}
+
+.service-details-wrapper {
+    .service-details-image {
+        img {
+            @include imgw;
+        }
+    }
+
+    .service-details-content {
+        h4 {
+            font-size: 22px;
+        }
+
+        .service-details-video {
+            margin-top: 50px;
+
+            @include breakpoint (max-sm) {
+                margin-top: 25px;
+                margin-bottom: 30px;
+            }
+
+            @include breakpoint (max-sm) {
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+
+            .details-video-content {
+                .feedback {
+                    @include flex;
+                    justify-content: space-between;
+                    padding-top: 40px;
+
+                    @include breakpoint (max-xs) {
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    }
+
+                    .infu {
+                        img {
+                            width: 176px;
+                            height: 50px;
+                            object-fit: cover;
+                            margin-bottom: 15px;
+                        }
+
+                        h6 {
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 29px;
+                            letter-spacing: -0.16px;
+                        }
+
+                        .icon-box {
+                            gap: 15px;
+
+                            @include breakpoint (max-xs) {
+                                flex-direction: column;
+                            }
+
+                            .icon {
+                                font-size: 40px;
+                                background: linear-gradient(84deg, $theme-color-2 0%, $theme-color 100%);
+                                @include clip;
+                            }
+
+
+                        }
+                    }
+                }
+            }
+
+            .video-image {
+                position: relative;
+
+                img {
+                    @include imgw;
+                    border-radius: 12px;
+                }
+
+                .video-box {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    .video-button {
+                        position: relative;
+                        @include icon;
+                        width: 80px;
+                        height: 80px;
+                        background: linear-gradient(84deg, #3FB5FD 0%, #0B6EDA 100%);
+                        @include transition;
+                        color: $white;
+                        z-index: 11;
+
+                        .video-button-ripple::before,
+                        .video-button-ripple::after {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            width: 100%;
+                            height: 100%;
+                            transform: translate(-50%, -50%);
+                            box-shadow: 0 0 0 0 rgba(63, 181, 253, 0.6);
+                            animation: popupVideo 3s infinite;
+                            border-radius: 50%;
+                        }
+
+                        .video-button-ripple::before {
+                            animation-delay: 0.9s;
+                            content: "";
+                            position: absolute;
+                        }
+
+                        .video-button-ripple::after {
+                            animation-delay: 0.6s;
+                            content: "";
+                            position: absolute;
+                        }
+
+                    }
+                }
+
+
+            }
+        }
+    }
+
+    .highlight-text {
+        margin-top: 30px;
+        padding: 18px;
+        border-left: 4px solid $theme-color;
+        box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.06);
+        background: $white;
+
+        h5 {
+            font-weight: 600;
+            line-height: 167%;
+        }
+    }
+
+    .service-image-item {
+        margin-top: 60px;
+        margin-bottom: 60px;
+
+        h3 {
+            font-size: 24px;
+        }
+
+        .service-box-image {
+            height: 218px;
+
+            img {
+                @include imgw;
+                object-fit: cover;
+            }
+        }
+    }
+}

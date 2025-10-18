@@ -1,0 +1,114 @@
+//>>>>> Section Title Start <<<<<//
+
+.section-title {
+	position: relative;
+
+	@include breakpoint (max-md) {
+		margin-bottom: 0;
+		text-align: center;
+	}
+
+	.sub-title {
+		display: inline-flex;
+		text-align: center;
+		padding: 6px 19px;
+		background: linear-gradient(84deg, rgba(63, 181, 253, 0.12) 0%, rgba(11, 110, 218, 0.12) 100%);
+		margin-bottom: 15px;
+		border-radius: 4px;
+
+		&.sub-title2 {
+			background: linear-gradient(84deg, rgba(63, 181, 253, 0.12) 0%, rgba(11, 110, 218, 0.12) 100%);
+
+		}
+
+		&.white-sub-title {
+			background: $white;
+
+		}
+
+		span {
+			font-size: 13px;
+			font-weight: 600;
+			line-height: 22px;
+			letter-spacing: 0.26px;
+			background: linear-gradient(84deg, #3FB5FD 0%, #0B6EDA 100%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			color: transparent;
+			text-transform: uppercase;
+		}
+	}
+
+
+
+	h2 {
+		color: $black-2;
+		font-size: 42px;
+		font-weight: 700;
+		line-height: 55px;
+		letter-spacing: -0.84px;
+		text-transform: none;
+
+		@include breakpoint (max-md) {
+			font-size: 38px;
+		}
+
+		@include breakpoint (max-sm) {
+			font-size: 32px;
+			line-height: 40px;
+		}
+
+		span {
+			color: $theme-color-2
+		}
+	}
+
+
+}
+
+
+.section-title-area {
+	@include flex;
+	justify-content: space-between;
+
+	@include breakpoint (max-lg) {
+		flex-wrap: wrap;
+		gap: 30px;
+		justify-content: center;
+	}
+}
+
+//>>>>> Section Title End <<<<<//
+
+//>>>>> Basic Css Start <<<<<//
+
+.center {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.section-bg {
+	background-color: $bg-color !important;
+}
+
+.section-bg-2 {
+	background-color: $black-2 !important;
+}
+
+.section-padding {
+	padding-top: 80px;
+	padding-bottom: 140px;
+
+	@include breakpoint(max-xl) {
+		padding: 100px 0;
+	}
+
+	@include breakpoint(max-lg) {
+		padding: 80px 0;
+	}
+}
+
+.choose-us-wrapper {
+	padding-top: 250px;
+}
+//>>>>> Basic Css End <<<<<//

@@ -1,0 +1,231 @@
+.cta-1 {
+    margin-top: -220px;
+
+    .cta-inner {
+        background-image: url('../../assets/img/cta/cta-bg.png');
+        height: 440px;
+        padding-left: 92px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        @include breakpoint(max-lg) {
+            height: 100%;
+            padding-left: 40px;
+            padding-top: 20px;
+        }
+
+        .shape-1 {
+            position: absolute;
+            bottom: 0;
+            right: 120px;
+            z-index: -1;
+        }
+
+        .shape-2 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            opacity: 30%;
+            z-index: -1;
+        }
+
+        .images {
+            width: 320px;
+            height: 380px;
+            margin-top: 60px;
+            margin-left: 60px;
+
+            @include breakpoint(max-lg) {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            @include breakpoint(max-xs) {
+                height: 100%;
+            }
+
+            img {
+                @include imgw;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+.cta-2 {
+    margin-top: -93px;
+
+    .cta-inner {
+        width: 100%;
+        position: relative;
+        padding: 60px 70px 60px 110px;
+        @include flex;
+        justify-content: space-between;
+        border-radius: 20px;
+        background: linear-gradient(84deg, $theme-color 0%, $theme-color-2 100%);
+        flex-wrap: wrap;
+        row-gap: 30px;
+
+        @include breakpoint(max-lg) {
+            padding: 60px 40px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .icon {
+            width: 114px;
+            height: 114px;
+            @include icon;
+            background-color: $white;
+            font-size: 53px;
+            position: absolute;
+            left: -56px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include breakpoint(max-lg) {
+                left: 50%;
+                top: -56px;
+                transform: translateY(-0);
+                transform: translateX(-50%);
+            }
+
+            i {
+                background-image: linear-gradient(84deg, $theme-color 0%, $theme-color-2 100%);
+                @include clip;
+            }
+        }
+
+        h3 {
+            color: $white;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 18px;
+            color: $white;
+        }
+
+    }
+
+    &.style-2 {
+        margin: 0;
+
+        .cta-inner {
+            padding-left: 40px;
+            padding-right: 50px;
+
+            @include breakpoint (max-xl) {
+                gap: 20px;
+                justify-content: center;
+
+            }
+
+            .icon {
+                position: initial;
+                transform: translateY(-0%);
+            }
+        }
+    }
+
+    &.style-3 {
+        margin-bottom: -105px;
+
+        .cta-inner {
+
+            background: linear-gradient(84deg, $theme-color 0%, $theme-color-4 100%);
+        }
+    }
+}
+
+
+.apps-wrapper {
+    position: relative;
+
+    .bg-image {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .apps-image {
+        width: 560px;
+        height: 700px;
+        margin-left: -35px;
+
+        img {
+            @include imgw;
+            object-fit: contain;
+        }
+    }
+
+    .apps-content {
+        @include breakpoint (max-md) {
+           padding-bottom: 80px;
+        }
+        .section-title {
+            h2 {
+                font-size: 80px;
+                line-height: 87px;
+                padding-bottom: 40px;
+
+                @include breakpoint (max-md) {
+                    font-size: 50px;
+                    line-height: 60px;
+                }
+            }
+        }
+
+        .avater {
+            gap: 15px;
+        }
+
+        .input-form {
+            position: relative;
+            margin-top: 30px;
+
+            input {
+                width: 100%;
+                outline: none;
+                border: none;
+                padding: 19px 22px;
+                color: var(--header);
+                background-color: rgb(245, 245, 245);
+                font-weight: 500;
+                border-radius: 4px;
+                transition: all 0.4s ease-in-out;
+
+            }
+
+            .theme-btn {
+                position: absolute;
+                right: 6px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        .button {
+            margin-top: 40px;
+            @include flex;
+            gap: 28px;
+            flex-wrap: wrap;
+
+    
+            .theme-btn {
+                i {
+                    padding-left: 15px;
+                    font-size: 22px;
+                    margin-top: -10px;
+                }
+                @include breakpoint (max-md) {
+                   width: 100%;
+                }
+            }
+        }
+    }
+}

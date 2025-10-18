@@ -1,0 +1,107 @@
+.topbar {
+    background-color: $header-color;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    position: relative;
+    z-index: 11;
+
+
+    @include breakpoint (max-lg) {
+        display: none
+    }
+
+    .topbar-inner {
+        ul {
+            @include flex;
+            gap: 35px;
+
+            li {
+                a {
+                    color: $white;
+                    opacity: 0.75;
+                    font-size: 14px;
+                    font-weight: 600;
+                    padding-left: 5px;
+                    background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
+                    transition: all 500ms ease;
+
+                    &:hover {
+                        color: $theme-color;
+                        background-size: 100% 1px;
+                    }
+                }
+
+                i {
+                    font-size: 18px;
+                    background: $theme-color;
+                    background-clip: text;
+                    color: transparent;
+
+                }
+            }
+        }
+
+        .social {
+            a {
+                color: $white;
+                opacity: 0.70;
+                padding: 0 5px;
+
+                &:hover {
+                    color: $theme-color;
+                    background-size: 100% 1px;
+                }
+            }
+        }
+    }
+
+    &.style-2 {
+        @include breakpoint (max-xxl) {
+            display: none
+        }
+
+        background-color: $white;
+        border: 1px solid rgba(2, 8, 66, 0.13);
+
+
+
+        p {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 22px
+        }
+
+        .topbar-right {
+            gap: 50px;
+
+
+            ul {
+                gap: 35px;
+
+                li {
+                    a {
+                        color: $text-color;
+                        opacity: 1;
+
+                        &:hover {
+                            color: $theme-color;
+                        }
+                    }
+
+                }
+            }
+
+            .social {
+                a {
+                    color: $black-2;
+                    opacity: 1;
+
+                    &:hover {
+                        color: $theme-color;
+                        background-size: 100% 1px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,115 @@
+.video-1 {
+    margin-top: -260px;
+
+    .video-image {
+        position: relative;
+        mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1316 535"  xmlns="http://www.w3.org/2000/svg"><path d="M0 104.971C0 101.788 1.26428 98.7357 3.51472 96.4853L96.4853 3.51472C98.7357 1.26428 101.788 0 104.971 0H1191.66C1194.46 0 1197.18 0.984195 1199.34 2.78134L1311.68 96.4018C1314.42 98.6818 1316 102.059 1316 105.62V523C1316 529.627 1310.63 535 1304 535H12C5.3726 535 0 529.627 0 523V104.971Z" /></svg>');
+        @include mask;
+        height: 535px;
+        border-radius: 30px;
+        mask-size: cover;
+
+        img {
+            @include imgw;
+            object-fit: cover;
+        }
+
+        &::after {
+            @include after;
+            background: rgba(2, 13, 68, 0.44);
+
+        }
+
+        .icon {
+            @include icon;
+            background: linear-gradient(84deg, $theme-color 0%, $theme-color-2 100%);
+            color: $white;
+            position: relative;
+            z-index: 2;
+            margin: auto;
+
+
+        }
+
+        .video-button {
+            position: relative;
+            @include icon;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(84deg, #3FB5FD 0%, #0B6EDA 100%);
+            @include transition;
+            z-index: 11;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            i {
+                font-size: 28px;
+                color: $white;
+            }
+
+
+            .video-button-ripple::before,
+            .video-button-ripple::after {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                height: 100%;
+                transform: translate(-50%, -50%);
+                box-shadow: 0 0 0 0 rgba(63, 181, 253, 0.6);
+                animation: popupVideo 3s infinite;
+                border-radius: 50%;
+            }
+
+            .video-button-ripple::before {
+                animation-delay: 0.9s;
+                content: "";
+                position: absolute;
+            }
+
+            .video-button-ripple::after {
+                animation-delay: 0.6s;
+                content: "";
+                position: absolute;
+            }
+
+        }
+
+    }
+
+    &.style-2 {
+        .video-image {
+            mask: none;
+            border-radius: 20px;
+
+            &::after {
+                display: none;
+            }
+
+            .icon {
+                width: 85px;
+                height: 85px;
+                font-size: 25px;
+            }
+        }
+    }
+
+    &.video-page {
+        margin-top: -220px;
+    }
+}
+
+
+
+
+
+@keyframes popupVideo {
+    70% {
+        box-shadow: 0 0 0 40px rgba(10, 165, 205, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(10, 165, 205, 0);
+    }
+}

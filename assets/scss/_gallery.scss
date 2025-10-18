@@ -1,0 +1,50 @@
+.gallery-img {
+    @include imgw;
+    position: relative;
+
+    &::before {
+        @include before;
+        background-color: $theme-color-4;
+        opacity: 0;
+        visibility: hidden;
+        @include transition;
+        border-radius: 12px;
+    }
+
+    img {
+        @include imgw;
+        border-radius: 12px;
+    }
+
+    .gallery-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: $white;
+        opacity: 0;
+        visibility: hidden;
+        @include transition;
+
+        h4 {
+            color: $white;
+        }
+
+        i {
+            font-size: 45px;
+        }
+    }
+
+    &:hover {
+        &::before {
+            opacity: .5;
+            visibility: visible;
+        }
+
+        .gallery-content {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

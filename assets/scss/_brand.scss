@@ -1,0 +1,72 @@
+.brand-1 {
+    margin-top: -80px;
+
+    @include breakpoint (max-lg) {
+        margin: 0;
+    }
+
+    .brand-inner {
+        h3 {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 45px;
+            letter-spacing: -0.6px;
+
+        }
+
+        .brand-logo {
+            img {
+                width: 100%;
+                height: 35px;
+                object-fit: contain;
+            }
+        }
+
+    }
+
+    &.style-2 {
+        margin: 0;
+    }
+
+    &.style-3 {
+        position: relative;
+        margin: 0;
+
+        .shape-1 {
+            position: absolute;
+            right: 10px;
+            top: 30px;
+            opacity: 5%;
+            animation: rounded 5s infinite linear;
+
+        }
+
+        .brand-inner {
+            .title {
+                position: relative;
+
+                &::after {
+                    @include after;
+                    width: 208px;
+                    height: 1px;
+                    background-color: $black;
+                    opacity: 13%;
+                    left: 15%;
+                    top: 15px;
+                    right: auto;
+                }
+
+                &::before {
+                    @include before;
+                    right: 15%;
+                    top: 15px;
+                    left: auto;
+                    width: 208px;
+                    height: 1px;
+                    background-color: $black;
+                    opacity: 13%;
+                }
+            }
+        }
+    }
+}

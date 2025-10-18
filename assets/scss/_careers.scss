@@ -1,0 +1,134 @@
+//>>>>> Careers Section Start <<<<<//
+
+.careers {
+    background-color: $bg-color;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+    
+    &__container {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        
+        @include breakpoint(max-lg) {
+            flex-direction: column;
+            gap: 40px;
+            text-align: center;
+        }
+    }
+    
+    &__media {
+        flex: 0 0 45%;
+        position: relative;
+        
+        @include breakpoint(max-lg) {
+            flex: none;
+            width: 100%;
+            max-width: 500px;
+        }
+    }
+    
+    &__img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        
+        &:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+        }
+    }
+    
+    &__content {
+        flex: 1;
+        padding: 40px 0;
+        position: relative;
+        z-index: 2;
+    }
+    
+    &__title {
+        color: $black-2;
+        font-size: clamp(32px, 5vw, 48px);
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        letter-spacing: -0.5px;
+    }
+    
+    &__sub {
+        color: $theme-color-2;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.4;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    
+    &__desc {
+        color: $text-color;
+        font-size: 18px;
+        line-height: 1.7;
+        margin-bottom: 35px;
+        max-width: 500px;
+        
+        @include breakpoint(max-lg) {
+            max-width: 100%;
+        }
+    }
+    
+    &__cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 15px 30px;
+        background: linear-gradient(84deg, $theme-color 0%, $theme-color-2 100%);
+        color: $white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(11, 110, 218, 0.3);
+        
+        &:hover {
+            background: linear-gradient(84deg, $theme-color-2 0%, $theme-color 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(11, 110, 218, 0.4);
+            color: $white;
+        }
+    }
+    
+    &__cta-arrow {
+        font-size: 18px;
+        transition: transform 0.3s ease;
+    }
+    
+    &__cta:hover &__cta-arrow {
+        transform: translate(2px, -2px);
+    }
+    
+    &__stripe {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(63, 181, 253, 0.1) 0%, rgba(11, 110, 218, 0.1) 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+        z-index: 1;
+        
+        @include breakpoint(max-lg) {
+            display: none;
+        }
+    }
+}
+
+//>>>>> Careers Section End <<<<<//

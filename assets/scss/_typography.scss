@@ -1,0 +1,187 @@
+/* --------------------------------------------
+    Template Default Fonts & Fonts Styles
+ ---------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+$heading-font: "Microsoft JhengHei", "微軟正黑體", "PingFang TC", "蘋方-繁", "Heiti TC", "黑體-繁", Arial, sans-serif;
+$body-font: 'Noto Sans TC', 'PingFang TC', '蘋方-繁', 'Microsoft JhengHei', '微軟正黑體', Arial, sans-serif;
+//font-family: "Font Awesome 5 Pro";
+$fa: "Microsoft JhengHei";
+
+body {
+	font-family: $body-font; // 全域字體優先 Noto Sans TC
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 28px;
+	color: $text-color;
+	background-color: $white;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+.page-wrapper {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	min-width: 300px;
+	overflow: hidden;
+}
+
+.container-fluid {
+	padding: 0 70px;
+
+	@include breakpoint (max-xxsmall) {
+		padding: 0 10px;
+	}
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+	padding: 0;
+}
+
+input:focus {
+	color: var(--white);
+	outline: none;
+}
+
+input {
+	color: $white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0px;
+	padding: 0;
+	@include transition;
+	font-weight: 700;
+	font-family: $heading-font; // 標題字體已設為微軟正黑體
+	color: $black-2;
+	letter-spacing: -0.2px;
+}
+
+h1 {
+	font-size: 80px;
+	line-height: 120%;
+}
+
+h2 {
+	font-size: 60px;
+	line-height: 130%;
+
+	@include breakpoint(max-xl) {
+		font-size: 42px;
+	}
+
+	@include breakpoint(max-md) {
+		font-size: 36px;
+	}
+
+	@include breakpoint(max-sm) {
+		font-size: 32px;
+	}
+}
+
+h3 {
+	font-size: 24px;
+	line-height: 150%;
+
+	@include breakpoint(max-sm) {
+		font-size: 20px;
+	}
+}
+h4 {
+	font-size: 20px;
+	line-height: 137%;
+}
+
+h5 {
+	font-size: 18px;
+	line-height: 150%;
+}
+
+h6 {
+	font-size: 16px;
+	line-height: 145%;
+}
+
+br {
+	@include breakpoint(max-md) {
+		display: none;
+	}
+	
+	&.hero-br {
+		@include breakpoint(max-md) {
+			display: inline;
+		}
+	}
+}
+
+a {
+	text-decoration: none;
+	outline: none !important;
+	cursor: pointer;
+	color: $header-color ;
+	@include transition;
+}
+
+p {
+	color: $text-color;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 30px;
+	margin: 0px;
+	@include transition;
+}
+
+// Split Text Animation Styles
+// .split-text {
+//     overflow: hidden;
+    
+//     .split-line {
+//         display: inline-block;
+//         overflow: hidden;
+//     }
+    
+//     &.left .split-line {
+//         transform: translateX(-50px);
+//         opacity: 0;
+//     }
+    
+//     &.right .split-line {
+//         transform: translateX(50px);
+//         opacity: 0;
+//     }
+    
+//     &.up .split-line {
+//         transform: translateY(80px);
+//         opacity: 0;
+//     }
+    
+//     &.down .split-line {
+//         transform: translateY(-80px);
+//         opacity: 0;
+//     }
+// }
+
+// // 確保 split-text 動畫完成後的狀態
+// .split-text.animated {
+//     .split-line {
+//         transform: translate(0, 0) !important;
+//         opacity: 1 !important;
+//     }
+// }

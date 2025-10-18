@@ -1,0 +1,189 @@
+.process-1 {
+    position: relative;
+
+    .process-items {
+        grid-template-columns: auto auto auto;
+        padding-top: 70px;
+        // padding-bottom: 260px;
+
+        @include breakpoint(max-xxl) {
+            grid-template-columns: auto auto;
+            gap: 30px;
+            justify-content: center !important;
+        }
+
+        @include breakpoint(max-lg) {
+            grid-template-columns: auto;
+        }
+
+        .single-process-item {
+            position: relative;
+            z-index: 1;
+            width: 372px;
+
+            .icon {
+                width: 56px;
+                height: 56px;
+                @include icon;
+                background: linear-gradient(84deg, #3FB5FD 0%, #0B6EDA 100%);
+                font-size: 20px;
+                font-weight: 700;
+                color: $white;
+                position: absolute;
+                top: 25px;
+                left: 10px;
+                z-index: 1;
+
+
+            }
+
+            &:nth-child(2) {
+                .icon {
+                    top: 5px;
+                    left: 15px;
+                }
+            }
+
+            @include breakpoint(max-lg) {
+                width: 100%;
+            }
+
+            .image {
+                mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 372 333" xmlns="http://www.w3.org/2000/svg"><path d="M0 75.1761C0 68.9789 2.87287 63.1318 7.77841 59.3447L79.2515 4.16861C82.7523 1.46598 87.0503 0 91.473 0H352C363.046 0 372 8.95431 372 20V312.34C372 323.385 363.046 332.34 352 332.34H20C8.95431 332.34 0 323.385 0 312.34V75.1761Z" /></svg>');
+                @include mask;
+                height: 332px;
+                mask-size: cover;
+
+                img {
+                    @include imgw;
+                    object-fit: cover;
+                }
+            }
+
+            h4 {
+                color: $white;
+                padding-top: 20px;
+            }
+
+            p {
+                color: rgba(255, 255, 255, 0.82);
+                font-weight: 500;
+                line-height: 26px;
+                padding: 15px 20px 0 20px;
+            }
+        }
+    }
+
+    .shape-1 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 5%;
+        animation: zoomBig 10s infinite linear;
+
+    }
+
+    .shape-2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        opacity: 40%;
+        animation: topToBottom 5s infinite linear;
+
+    }
+
+    .shape-3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 40%;
+        animation: leftToRight 5s infinite linear;
+
+    }
+
+    .shape-4 {
+        position: absolute;
+        top: 26.5%;
+        left: 25.5%;
+        animation: leftToRight 3s infinite linear;
+
+    }
+
+    .shape-5 {
+        position: absolute;
+        bottom: 29.5%;
+        left: 49.5%;
+        animation: leftToRight 3s infinite linear;
+
+    }
+}
+
+
+.process-2 {
+    position: relative;
+    .signle-process-item {
+        position: relative;
+        text-align: center;
+        margin-top: 30px;
+
+        .shape-1 {
+            position: absolute;
+            right: -130px;
+            animation: rotateleft2 5s linear infinite;
+
+            @include breakpoint (max-md) {
+                display: none;
+            }
+        }
+
+        .shape-2 {
+            position: absolute;
+            right: -120px;
+            top: 25px;
+            animation: rotateleft 5s linear infinite;
+
+            @include breakpoint (max-xl) {
+                display: none;
+            }
+
+        }
+
+        .icons {
+            display: inline-block;
+            position: relative;
+            padding-bottom: 35px;
+
+            .icon-1 {
+                width: 111px;
+                height: 111px;
+                @include icon;
+                box-shadow: 7px 11px 50px 50px rgba(2, 8, 66, 0.03);
+                font-size: 37px;
+                background: $white;
+                color: $theme-color;
+                @include transition;
+            }
+
+            .icon-2 {
+                width: 41px;
+                height: 41px;
+                @include icon;
+                color: $white;
+                font-size: 16px;
+                font-weight: 700;
+                background-color: $theme-color-2;
+                position: absolute;
+                right: -10px;
+            }
+        }
+
+        &:hover {
+            .icon-1 {
+                background-color: $theme-color-2;
+                color: $white;
+                transform: scale(1.05);
+            }
+
+        }
+    }
+}

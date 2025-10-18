@@ -1,0 +1,473 @@
+.contact-us-1 {
+    position: relative;
+
+    .shape-1 {
+        position: absolute;
+        bottom: 0;
+        right: -5%;
+        opacity: 8%;
+        z-index: -1;
+    }
+
+    .shape-2 {
+        position: absolute;
+        top: 0;
+        left: -8%;
+        opacity: 8%;
+        z-index: -1;
+        rotate: 250deg;
+    }
+
+    .contact-us-content {
+        .infu-box {
+            padding-bottom: 30px;
+            gap: 20px;
+
+            @include breakpoint (max-md) {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .icon {
+                @include clip;
+                background-image: linear-gradient(84deg, $theme-color 0%, $theme-color-2 100%);
+                font-size: 21px;
+            }
+
+            h3 {
+                font-weight: 600;
+                letter-spacing: -0.24px;
+            }
+
+
+        }
+    }
+
+    .contact-right {
+        position: relative;
+        background-color: $white;
+        border-radius: 12px;
+        padding: 50px;
+        box-shadow: 7px 11px 50px 52px rgba(2, 8, 66, 0.03);
+        margin-left: -5px;
+
+        @include breakpoint (max-lg) {
+            padding: 50px 20px;
+        }
+
+        &::after {
+            @include after;
+            background-color: $theme-color;
+            right: -5px;
+            left: auto;
+            z-index: -1;
+            border-radius: 12px;
+
+        }
+
+        h3 {
+            font-size: 28px;
+            font-weight: 600;
+            letter-spacing: -0.28px;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .form-clt {
+            position: relative;
+
+            .icon {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                width: 35px;
+                height: 35px;
+                line-height: 32px;
+                border-radius: 50%;
+                background-color: $white;
+                box-shadow: 0px 10px 20px 0px rgba(34, 34, 34, 0.08);
+                text-align: center;
+
+                @include breakpoint(max-sm) {
+                    top: 15px;
+                }
+
+                i {
+                    color: $header-color;
+                    font-size: 14px;
+                }
+            }
+
+            input {
+                width: 100%;
+                outline: none;
+                border: none;
+                padding: 10px 22px;
+                color: $header-color;
+                background-color: rgb(245, 245, 245);
+                font-weight: 500;
+                border-radius: 4px;
+                @include transition;
+
+                @include breakpoint(max-lg) {
+                    font-size: 15px;
+                }
+
+                @include breakpoint(max-sm) {
+                    font-size: 14px;
+                    padding: 15px 20px;
+                }
+            }
+
+            .nice-select {
+                background-color: rgb(245, 245, 245);
+                font-weight: 500;
+                border-radius: 4px;
+                padding: 10px 22px;
+                width: 100%;
+                border: none;
+
+                &::after {
+                    height: 10px;
+                    width: 10px;
+                    right: 25px;
+                    border-color: $text-color;
+                    border-bottom: 2px solid $text-color;
+                    border-right: 2px solid $text-color;
+                }
+
+                span {
+                    color: $text-color;
+                }
+
+                @include breakpoint(max-lg) {
+                    font-size: 15px;
+                }
+
+                @include breakpoint(max-sm) {
+                    font-size: 14px;
+                    padding: 15px 20px;
+                }
+
+                .list {
+                    background-color: $white;
+                    width: 100%;
+
+                    li {
+                        border: none;
+                        background-color: transparent;
+                    }
+                }
+
+                .option {
+                    padding: 8px 10px;
+                }
+            }
+        }
+
+        .form-clt-big {
+            textarea {
+                padding: 10px 22px 105px;
+                width: 100%;
+                outline: none;
+                color: $header-color;
+                background-color: rgb(245, 245, 245);
+                font-weight: 500;
+                border: none;
+                border-radius: 4px;
+
+                @include breakpoint(max-xl) {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .theme-btn {
+            background-color: $theme-color-2;
+        }
+    }
+}
+
+
+.contact-us-2 {
+    position: relative;
+
+
+    &::after {
+        @include after;
+        max-width: 1500px;
+        height: 642px;
+        background: rgba(0, 85, 255, 0.08);
+        margin: 0 auto;
+        z-index: -1;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .shape-1 {
+        position: absolute;
+        top: 0%;
+        left: 10.6%;
+        opacity: 21%;
+        z-index: 11;
+
+        @include breakpoint (max-xl4) {
+            display: none;
+        }
+    }
+
+    .shape-2 {
+        position: absolute;
+        top: 4%;
+        left: 14%;
+        opacity: 21%;
+        z-index: 11;
+        rotate: 90deg;
+        animation: zoomBig 3s infinite linear;
+
+        @include breakpoint (max-xl4) {
+            display: none;
+        }
+    }
+
+    .shape-3 {
+        position: absolute;
+        top: 2%;
+        right: 11.8%;
+        z-index: -1;
+        animation: zoomBig 3s infinite linear;
+
+        @include breakpoint (max-xl4) {
+            display: none;
+        }
+    }
+
+    .contact-us-inner {
+        margin-top: 40px;
+        padding: 60px;
+        padding-top: 50px;
+        border-radius: 12px;
+        background: $white;
+        box-shadow: 7px 11px 50px 52px rgba(2, 8, 66, 0.03);
+
+        @include breakpoint(max-xxsmall) {
+            padding: 60px 30px;
+        }
+
+
+        .contact-left {
+            span {
+                color: rgba(73, 81, 91, 0.84);
+                font-weight: 500;
+
+            }
+
+            .form-clt {
+                position: relative;
+                margin-top: 12px;
+
+
+                input {
+                    width: 100%;
+                    outline: none;
+                    border: none;
+                    padding: 10px 22px;
+                    color: $header-color;
+                    background-color: transparent;
+                    border: 1px solid $border-color-2;
+                    font-weight: 500;
+                    border-radius: 4px;
+                    @include transition;
+
+                    @include breakpoint(max-lg) {
+                        font-size: 15px;
+                    }
+
+                    @include breakpoint(max-sm) {
+                        font-size: 14px;
+                        padding: 15px 20px;
+                    }
+                }
+            }
+
+            .categories {
+                .categories-items {
+                    @include flex;
+                    gap: 10px;
+                    flex-wrap: wrap;
+
+                    .single-item {
+                        padding: 5px 17px;
+                        border-radius: 4px;
+                        display: inline-flex;
+                        border: 1px solid $border-color-2;
+                    }
+                }
+            }
+
+            .checked-box {
+                max-width: 430px;
+
+                .checked-box-items {
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    row-gap: 10px;
+
+                    @include breakpoint(max-sm) {
+                        grid-template-columns: auto auto;
+                    }
+
+                    @include breakpoint(max-xxsmall) {
+                        grid-template-columns: auto;
+                    }
+
+                    .form-check {
+                        .form-check-label {
+                            color: rgba(73, 81, 91, 0.83);
+                            font-size: 14px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        .contact-right {
+            .price-ranger {
+                width: 100%;
+
+                .ui-slider-horizontal {
+                    height: 8px;
+                    margin-top: 15px;
+                }
+
+                .ui-slider {
+                    .ui-slider-handle {
+                        width: 22px;
+                        height: 22px;
+                        border: none;
+                        border-radius: 50%;
+                        background: linear-gradient(84deg, $theme-color 0%, $theme-color-2 100%);
+                        top: -8px;
+
+                        &:nth-child(2) {
+                            display: none;
+                        }
+
+                    }
+
+                    .ui-slider-range {
+                        background: linear-gradient(84deg, $theme-color 0%, $theme-color-2 100%);
+
+                    }
+                }
+
+                .ranger-min-max-block {
+
+                    @include flex;
+                    justify-content: space-between;
+                    width: 50%;
+                }
+            }
+
+            .form-clt-big {
+                textarea {
+
+                    margin-top: 15px;
+                    padding: 10px 22px;
+                    width: 100%;
+                    outline: none;
+                    color: $header-color;
+                    border: 1px solid $border-color-2;
+                    font-weight: 500;
+                    min-height: 270px;
+                    border-radius: 4px;
+
+                    @include breakpoint(max-xl) {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            span {
+                color: rgba(73, 81, 91, 0.84);
+                font-weight: 500;
+            }
+
+            .contact-btn {
+                .infu {
+                    @include flex;
+                    gap: 10px;
+
+                    @include breakpoint (max-xxl) {
+                        display: none;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        color: $theme-color-2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.single-contact-card {
+    background-color: $white;
+    padding: 30px 35px;
+    transition: all .3s ease-in-out;
+    gap: 20px;
+    box-shadow: 7px 11px 50px 52px rgba(2, 8, 66, 0.03);
+    border-radius: 12px;
+    position: relative;
+    @include transition;
+    z-index: 1;
+
+    &::after {
+        @include after;
+        background: linear-gradient(84deg, $theme-color 0%, $theme-color-4 100%);
+        z-index: -1;
+        border-radius: 12px;
+        width: 0;
+        opacity: 0;
+        visibility: hidden;
+        @include transition;
+    }
+
+
+    .icon {
+        font-size: 30px;
+        color: $theme-color;
+    }
+
+    &:hover {
+        &::after {
+            width: 100%;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .icon {
+            color: $white !important;
+        }
+
+        p,
+        span,
+        h4 {
+            color: #fff;
+        }
+    }
+
+
+
+
+}
+
+.office-google-map-wrapper {
+    iframe {
+        width: 100%;
+        height: 600px;
+    }
+}

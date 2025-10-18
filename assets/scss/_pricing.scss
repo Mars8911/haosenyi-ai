@@ -1,0 +1,232 @@
+.pricing-1 {
+    .icon-box {
+        margin-top: 40px;
+        gap: 20px;
+
+        @include breakpoint (max-md) {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .icon {
+            font-size: 43px;
+            background: linear-gradient(84deg, #3FB5FD 0%, #0B6EDA 100%);
+            @include clip;
+        }
+
+        .title {
+            h4 {
+                color: $white;
+                padding-bottom: 10px;
+            }
+
+            p {
+                color: rgba(255, 255, 255, 0.75);
+
+            }
+        }
+    }
+
+    .single-pricing-item {
+        border-radius: 12px;
+        background-color: $theme-color-3;
+        padding: 40px 50px;
+        position: relative;
+
+        @include breakpoint (max-xxl) {
+            padding: 40px;
+        }
+
+        .header {
+            h4 {
+                color: $white;
+                padding-bottom: 10px;
+
+            }
+
+            span {
+                color: rgba(255, 255, 255, 0.75);
+                font-weight: 500;
+            }
+        }
+
+        .price {
+            padding: 25px 0;
+            font-size: 60px;
+            font-weight: 800;
+            line-height: 69px;
+            letter-spacing: -1.2px;
+            background: linear-gradient(84deg, #3FB5FD 0%, #0B6EDA 100%);
+            @include clip;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+
+
+
+            span {
+                color: rgba(255, 255, 255, 0.75);
+                font-weight: 500;
+                line-height: 26px;
+                font-size: 16px;
+            }
+        }
+
+        .list {
+            margin-top: 30px;
+
+            li {
+                color: rgba(255, 255, 255, 0.75);
+                font-style: normal;
+                font-weight: 500;
+                line-height: 26px;
+                padding-bottom: 12px;
+
+                i {
+                    color: $theme-color-2;
+                    padding-right: 5px;
+                }
+            }
+        }
+
+        .theme-btn {
+            margin-top: 25px;
+            width: 100%;
+        }
+    }
+
+    &.style-2 {
+        position: relative;
+
+        .light-shape {
+            width: 638px;
+            height: 638px;
+            position: absolute;
+            left: -10%;
+            top: -20%;
+            border-radius: 50%;
+            background-color: rgba(255, 225, 0, 0.26);
+            filter: blur(250px);
+        }
+
+        .shape-1 {
+            position: absolute;
+            left: -5%;
+            top: -20%;
+            opacity: 13%;
+            animation: spinner 30s infinite linear;
+
+        }
+
+        .single-pricing-item {
+            background-color: $white;
+            padding: 55px 20px;
+            padding-bottom: 0;
+            position: relative;
+            @include flex;
+            flex-direction: column;
+            box-shadow: 7px 11px 50px 52px rgba(2, 8, 66, 0.03);
+            margin-top: 30px;
+
+            &::after {
+                @include after;
+                border: 1px solid $theme-color-4;
+                height: 0;
+                opacity: 0;
+                @include transition;
+                border-radius: 4px;
+            }
+
+
+            &.border-style {
+                border: 1px solid $theme-color-4;
+                height: 660px;
+                justify-content: space-between;
+
+                @include breakpoint (max-xl) {
+                    height: auto;
+                }
+
+                &:hover {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+
+            .price-btn {
+                background-color: #F2F2F3;
+                padding: 5px 13px;
+                border: 1px solid $black-2;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 22px;
+                letter-spacing: 0.24px;
+                position: absolute;
+                top: -15px;
+                right: 20px;
+                cursor: pointer;
+            }
+
+            .header {
+                h4 {
+                    color: $black-2;
+                    text-align: center;
+
+                }
+
+                span {
+                    color: $text-color;
+                }
+            }
+
+            .price {
+                border-bottom: none;
+
+
+
+                span {
+                    color: $text-color;
+                }
+            }
+
+            .list {
+                margin-top: 30px;
+
+                li {
+                    color: $text-color;
+
+                }
+            }
+
+            .theme-btn {
+                width: calc(100% - 80px);
+                text-align: center;
+                margin-top: 0;
+            }
+
+            .price-img {
+                width: 100%;
+                height: 102px;
+                margin-top: 20px;
+
+                img {
+                    @include imgw;
+                    object-fit: cover;
+                    border-radius: 12px 12px 0px 0px;
+                }
+            }
+
+            &:hover {
+                &::after {
+                    @include after;
+                    border: 1px solid $theme-color-4;
+                    height: 100%;
+                    opacity: 1;
+                }
+            }
+
+        }
+
+    }
+}
