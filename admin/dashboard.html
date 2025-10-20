@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>後台管理 - 儀表板</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .sidebar .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            margin: 5px 0;
+        }
+        .sidebar .nav-link:hover,
+        .sidebar .nav-link.active {
+            color: white;
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .main-content {
+            background: #f8f9fa;
+            min-height: 100vh;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 10px;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- 側邊欄 -->
+            <div class="col-md-3 col-lg-2 px-0">
+                <div class="sidebar p-3">
+                    <div class="text-center mb-4">
+                        <h4 class="text-white fw-bold">後台管理</h4>
+                    </div>
+                    
+                    <nav class="nav flex-column">
+                        <a class="nav-link active" href="#" data-section="dashboard">
+                            <i class="fas fa-tachometer-alt me-2"></i>儀表板
+                        </a>
+                        <a class="nav-link" href="#" data-section="articles">
+                            <i class="fas fa-newspaper me-2"></i>文章管理
+                        </a>
+                        <a class="nav-link" href="#" data-section="works">
+                            <i class="fas fa-briefcase me-2"></i>作品集管理
+                        </a>
+                        <a class="nav-link" href="#" data-section="settings">
+                            <i class="fas fa-cog me-2"></i>設定
+                        </a>
+                        <hr class="text-white">
+                        <a class="nav-link" href="#" id="logoutBtn">
+                            <i class="fas fa-sign-out-alt me-2"></i>登出
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            
+            <!-- 主要內容 -->
+            <div class="col-md-9 col-lg-10 px-0">
+                <div class="main-content p-4">
+                    <!-- 儀表板 -->
+                    <div id="dashboard-section">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h2 class="fw-bold">儀表板</h2>
+                            <div class="text-muted">
+                                <i class="fas fa-calendar me-2"></i>
+                                <span id="currentDate"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-3">
+                                <div class="card text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-newspaper fa-2x text-primary mb-3"></i>
+                                        <h5 class="card-title">總文章數</h5>
+                                        <h3 class="text-primary" id="totalArticles">-</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-eye fa-2x text-success mb-3"></i>
+                                        <h5 class="card-title">已發布</h5>
+                                        <h3 class="text-success" id="publishedArticles">-</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-briefcase fa-2x text-warning mb-3"></i>
+                                        <h5 class="card-title">作品總數</h5>
+                                        <h3 class="text-warning" id="totalWorks">-</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="card text-center p-3">
+                                    <div class="card-body">
+                                        <i class="fas fa-star fa-2x text-info mb-3"></i>
+                                        <h5 class="card-title">精選作品</h5>
+                                        <h3 class="text-info" id="featuredWorks">-</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">最新文章</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="recentArticles">
+                                            <div class="text-center text-muted">
+                                                <i class="fas fa-spinner fa-spin"></i> 載入中...
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h5 class="mb-0">最新作品</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="recentWorks">
+                                            <div class="text-center text-muted">
+                                                <i class="fas fa-spinner fa-spin"></i> 載入中...
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 文章管理 -->
+                    <div id="articles-section" style="display: none;">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h2 class="fw-bold">文章管理</h2>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#articleModal">
+                                <i class="fas fa-plus me-2"></i>新增文章
+                            </button>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>標題</th>
+                                                <th>狀態</th>
+                                                <th>建立時間</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="articlesTable">
+                                            <tr>
+                                                <td colspan="4" class="text-center text-muted">
+                                                    <i class="fas fa-spinner fa-spin"></i> 載入中...
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 作品集管理 -->
+                    <div id="works-section" style="display: none;">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h2 class="fw-bold">作品集管理</h2>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#workModal">
+                                <i class="fas fa-plus me-2"></i>新增作品
+                            </button>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>標題</th>
+                                                <th>公司</th>
+                                                <th>類型</th>
+                                                <th>精選</th>
+                                                <th>操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="worksTable">
+                                            <tr>
+                                                <td colspan="5" class="text-center text-muted">
+                                                    <i class="fas fa-spinner fa-spin"></i> 載入中...
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // 檢查登入狀態
+        const token = localStorage.getItem('token');
+        if (!token) {
+            window.location.href = '/admin/login.html';
+        }
+        
+        // 設定當前日期
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString('zh-TW');
+        
+        // 側邊欄導航
+        document.querySelectorAll('.nav-link[data-section]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // 移除所有 active 類別
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                // 添加 active 類別到點擊的連結
+                link.classList.add('active');
+                
+                // 隱藏所有區段
+                document.querySelectorAll('[id$="-section"]').forEach(section => {
+                    section.style.display = 'none';
+                });
+                
+                // 顯示選中的區段
+                const sectionId = link.dataset.section + '-section';
+                document.getElementById(sectionId).style.display = 'block';
+                
+                // 載入對應的資料
+                if (link.dataset.section === 'dashboard') {
+                    loadDashboardData();
+                } else if (link.dataset.section === 'articles') {
+                    loadArticles();
+                } else if (link.dataset.section === 'works') {
+                    loadWorks();
+                }
+            });
+        });
+        
+        // 登出功能
+        document.getElementById('logoutBtn').addEventListener('click', () => {
+            localStorage.removeItem('token');
+            window.location.href = '/admin/login.html';
+        });
+        
+        // 載入儀表板資料
+        async function loadDashboardData() {
+            try {
+                const [articlesRes, worksRes] = await Promise.all([
+                    fetch('/api/articles'),
+                    fetch('/api/works')
+                ]);
+                
+                const articlesData = await articlesRes.json();
+                const worksData = await worksRes.json();
+                
+                // 更新統計數字
+                document.getElementById('totalArticles').textContent = articlesData.pagination.total;
+                document.getElementById('publishedArticles').textContent = 
+                    articlesData.articles.filter(a => a.status === 'PUBLISHED').length;
+                document.getElementById('totalWorks').textContent = worksData.pagination.total;
+                document.getElementById('featuredWorks').textContent = 
+                    worksData.works.filter(w => w.isFeatured).length;
+                
+                // 顯示最新文章
+                const recentArticlesHtml = articlesData.articles.slice(0, 5).map(article => `
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <div>
+                            <strong>${article.title}</strong>
+                            <small class="text-muted d-block">${new Date(article.createdAt).toLocaleDateString('zh-TW')}</small>
+                        </div>
+                        <span class="badge ${article.status === 'PUBLISHED' ? 'bg-success' : 'bg-secondary'}">
+                            ${article.status === 'PUBLISHED' ? '已發布' : '草稿'}
+                        </span>
+                    </div>
+                `).join('');
+                
+                document.getElementById('recentArticles').innerHTML = recentArticlesHtml || '<div class="text-muted">尚無文章</div>';
+                
+                // 顯示最新作品
+                const recentWorksHtml = worksData.works.slice(0, 5).map(work => `
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <div>
+                            <strong>${work.title}</strong>
+                            <small class="text-muted d-block">${work.company}</small>
+                        </div>
+                        <span class="badge bg-primary">${work.type}</span>
+                    </div>
+                `).join('');
+                
+                document.getElementById('recentWorks').innerHTML = recentWorksHtml || '<div class="text-muted">尚無作品</div>';
+                
+            } catch (error) {
+                console.error('載入儀表板資料錯誤:', error);
+            }
+        }
+        
+        // 載入文章列表
+        async function loadArticles() {
+            try {
+                const response = await fetch('/api/articles');
+                const data = await response.json();
+                
+                const articlesHtml = data.articles.map(article => `
+                    <tr>
+                        <td>${article.title}</td>
+                        <td>
+                            <span class="badge ${article.status === 'PUBLISHED' ? 'bg-success' : 'bg-secondary'}">
+                                ${article.status === 'PUBLISHED' ? '已發布' : '草稿'}
+                            </span>
+                        </td>
+                        <td>${new Date(article.createdAt).toLocaleDateString('zh-TW')}</td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-primary me-2" onclick="editArticle(${article.id})">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger" onclick="deleteArticle(${article.id})">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                `).join('');
+                
+                document.getElementById('articlesTable').innerHTML = articlesHtml || '<tr><td colspan="4" class="text-center text-muted">尚無文章</td></tr>';
+                
+            } catch (error) {
+                console.error('載入文章錯誤:', error);
+            }
+        }
+        
+        // 載入作品列表
+        async function loadWorks() {
+            try {
+                const response = await fetch('/api/works');
+                const data = await response.json();
+                
+                const worksHtml = data.works.map(work => `
+                    <tr>
+                        <td>${work.title}</td>
+                        <td>${work.company}</td>
+                        <td>
+                            <span class="badge bg-primary">${work.type}</span>
+                        </td>
+                        <td>
+                            ${work.isFeatured ? '<i class="fas fa-star text-warning"></i>' : '<i class="fas fa-star text-muted"></i>'}
+                        </td>
+                        <td>
+                            <button class="btn btn-sm btn-outline-primary me-2" onclick="editWork(${work.id})">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger" onclick="deleteWork(${work.id})">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                `).join('');
+                
+                document.getElementById('worksTable').innerHTML = worksHtml || '<tr><td colspan="5" class="text-center text-muted">尚無作品</td></tr>';
+                
+            } catch (error) {
+                console.error('載入作品錯誤:', error);
+            }
+        }
+        
+        // 初始化載入儀表板資料
+        loadDashboardData();
+    </script>
+</body>
+</html>
+
+
+
