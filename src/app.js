@@ -63,6 +63,55 @@ app.use('/api/articles', articleRoutes);
 app.use('/api/works', workRoutes);
 app.use('/webhook', webhookRoutes);
 
+// 靜態頁面路由
+app.get('/services', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'services.html'));
+});
+
+app.get('/contact', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'contact.html'));
+});
+
+app.get('/ai-dev', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'ai-dev.html'));
+});
+
+app.get('/app-dev', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'app-dev.html'));
+});
+
+app.get('/web-dev', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'web-dev.html'));
+});
+
+app.get('/tech-article', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'tech-article.html'));
+});
+
+app.get('/tech-article01', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'tech-article01.html'));
+});
+
+app.get('/tech-article02', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'tech-article02.html'));
+});
+
+app.get('/tech-article03', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'tech-article03.html'));
+});
+
+app.get('/tech-article04', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'tech-article04.html'));
+});
+
+app.get('/tech-article05', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'tech-article05.html'));
+});
+
+app.get('/tech-article06', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'public', 'tech-article06.html'));
+});
+
 // 根路由重定向到首頁
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'index.html'));
